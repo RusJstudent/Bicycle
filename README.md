@@ -1,0 +1,1 @@
+#### Верстка лендинга по макету от фрилансера: https://youtu.be/hoC_fjeL6P4?si=nvXj1-20niAFFsuD
