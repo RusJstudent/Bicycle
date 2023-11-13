@@ -382,39 +382,45 @@ $border-color: #94979a;
     }
 }
 
-.shop {
-    // .shop__body
-    &__body {}
-    // .shop__footer
-    &__footer {
+.slider {
+    padding: 115px 0px 165px 0px;
+    background-color: $bg;
+    // .slider__row
+    &__row {}
+    // .slider__container
+    &__container {
         display: flex;
-        justify-content: center;
-        padding: 75px 0;
-        background-color: $shop-bg;
-
-        @media (max-width: 767px) {
-            padding: 50px 0;
-        }
-    }
-    // .shop__button
-    &__button {
-        height: 50px;
-        width: 300px;
-        border: 1px solid $border-color;
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        text-transform: uppercase;
-        color: #fff;
-        transition: 0.3s;
-
-        &:hover {
-            color: $shop-bg;
-            background-color: #fff;
-        }
+    }
+    // .slider__icon
+    &__icon {
+        margin: 0px 0px 30px 0px;
+    }
+    // .slider__label
+    &__label {
+        margin: 0px 0px 20px 0px;
+        letter-spacing: 1px;
+        font-size: 18px;
+    }
+    // .slider__address
+    &__address {
+        font-weight: 700;
+    }
+    // .slider__time
+    &__time {
+        color: $text-color;
+        font-weight: 300;
+    }
+    // .slider__text
+    &__text {
+        text-align: center;
+        color: $text-color;
+        font-style: italic;
+        font-size: 24px;
+        line-height: calc(34 / 24);
     }
 }
-
 
 .shop {
     // .shop__body
@@ -469,6 +475,35 @@ $border-color: #94979a;
 
     &__bg_m {
         padding: 0px 0px 50% 0px;
+    }
+
+    // .shop__footer
+    &__footer {
+        display: flex;
+        justify-content: center;
+        padding: 75px 0;
+        background-color: $shop-bg;
+
+        @media (max-width: 767px) {
+            padding: 50px 0;
+        }
+    }
+    // .shop__button
+    &__button {
+        height: 50px;
+        width: 300px;
+        border: 1px solid $border-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        color: #fff;
+        transition: 0.3s;
+
+        &:hover {
+            color: $shop-bg;
+            background-color: #fff;
+        }
     }
 }
 
