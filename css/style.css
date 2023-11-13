@@ -347,6 +347,16 @@
 .slider {
   padding: 115px 0px 165px 0px;
   background-color: #f7f7f7;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.slider__row {
+  flex: 0 0 100%;
+  transition: 0.3s;
+}
+.slider__row:not(:first-child) {
+  height: 0;
 }
 .slider__container {
   display: flex;
@@ -374,6 +384,27 @@
   font-style: italic;
   font-size: 24px;
   line-height: 1.4166666667;
+}
+.slider__nav {
+  position: absolute;
+  bottom: 66px;
+  left: calc(50% - 2px);
+  transform: translate(-50%);
+  display: flex;
+}
+.slider__circle {
+  width: 11px;
+  height: 11px;
+  border: 1px solid #a9afb3;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+.slider__circle:not(:last-child) {
+  margin: 0px 9px 0px 0px;
+}
+.slider__circle._active {
+  background-color: #a9afb3;
 }
 
 .shop__body {

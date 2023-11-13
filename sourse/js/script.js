@@ -11,3 +11,38 @@ burgerMenu.onclick = function(e) {
         document.body.style.overflow = '';
     }
 }
+
+const slider = document.querySelector('.slider');
+const leftSlider = slider.querySelectorAll('.slider__row')[0];
+const sliderNav = document.querySelector('.slider__nav');
+let currentMargin = 0;
+
+// const initialHeight = leftSlider.getBoundingClientRect().height;
+// slider.style.maxHeight = slider.getBoundingClientRect().height + 'px';
+
+sliderNav.onclick = function(e) {
+    if (!e.target.classList.contains('slider__circle')) return;
+    if (e.target.classList.contains('_active')) return;
+
+    const navElems = Array.from(sliderNav.querySelectorAll('.slider__circle'));
+    const prevIdx = navElems.findIndex(elem => elem.classList.contains('_active'));
+    const currentIdx = navElems.findIndex(elem => elem === e.target);
+    navElems[prevIdx].classList.remove('_active');
+    e.target.classList.add('_active');
+
+    let diff = currentIdx - prevIdx;
+
+    currentMargin += - diff * document.documentElement.clientWidth;
+    leftSlider.style.marginLeft = currentMargin + 'px';
+
+    slider.children[currentIdx].style.height = 'auto';
+    slider.children[prevIdx].style.height = 0;
+
+    setTimeout(() => {
+
+        console.log(slider.children[currentIdx].getBoundingClientRect().height);
+    })
+
+
+    // slider.style.maxHeight = 700 + 'px';
+}
